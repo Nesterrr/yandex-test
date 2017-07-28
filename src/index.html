@@ -13,15 +13,26 @@
         <label for="fio">
             ФИО<input type="text" name="fio" id="fio">
         </label>
+        <ul>
+            <li>поле должно содержать фамилию, имя и отчество</li>
+        </ul>
         <label for="email">
             Email<input type="email" name="email" id="email">
         </label>
+        <ul>
+            <li>поле должно содержать email</li>
+            <li>доступные домены: ya.ru, yandex.ru, yandex.ua, yandex.by, yandex.kz, yandex.com</li>
+        </ul>
         <label for="phone">
             Телефон<input type="phone" name="phone" id="phone">
         </label>
+        <ul>
+            <li>Формат телефонного номера  +7(999)999-99-99</li>
+            <li>Сумма всех цифр не более 30</li>
+        </ul>
         <button id="submitButton" type="submit">Отправить</button>
     </form>
     <div id="resultContainer"></div>
-    <script src="./js/main.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
