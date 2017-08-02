@@ -38,5 +38,28 @@ MyForm.prototype.extChar = (str) => {
 }
 
 MyForm.prototype.domain = (str) => {
+    let result = [];
+    domains.forEach((domain) => {
+        let rgxp = new RegExp('[a-z]{1,50}' + '@' + domain);
+        let sub = str.match(rgxp)
+        if(sub != null) {
+            result.push(sub);
+        }
+    });
+    return result.length === 0 ? false : true;
+}
 
+MyForm.prototype.phoneSum = (str) => {
+    var result = 0;
+    function isNum(num) {
+        if (Number.isInteger(num)) {
+            return num;
+        }
+    }
+    str.split('').map((i) => {
+        return parseInt(i);
+    }).filter(isNum).forEach((n) => {
+        result += n;
+    });
+    return result > 47 ? false : true;
 }
